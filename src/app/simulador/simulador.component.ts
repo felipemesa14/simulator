@@ -33,6 +33,8 @@ export class SimuladorComponent {
     this.apiService.getData(this.creditValue, this.storeId).subscribe((resp: any) => {
       this.fees = resp.data.fees
       this.totalFeeValue = resp.data.totalFeeValue
+    }, (err) => {
+      console.log(err);
     })
   }
 }
