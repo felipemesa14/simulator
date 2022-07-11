@@ -20,18 +20,19 @@ export class SimuladorComponent {
   }
 
   storeId: string = "5cbe1d8704ea5626804cfc85";
-  creditValue: number = 40000;
+  creditValue: number = 50000;
   fees = 0;
   totalFeeValue = 0;
 
   constructor(
     private apiService: ApiService
   ) {
+  }
+
+  ngOnInit() {
     this.apiService.getData(this.creditValue, this.storeId).subscribe((resp: any) => {
       this.fees = resp.data.fees
       this.totalFeeValue = resp.data.totalFeeValue
-    }, (err) => {
-      console.log(err);
     })
   }
 }

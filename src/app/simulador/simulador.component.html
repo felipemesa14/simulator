@@ -5,13 +5,15 @@
   <div class="container-info">
     <span class="plain-text">Llévalo con </span>
     <span>
-      <img id="logotipo-siste" src="https://i.postimg.cc/H8mPrvjy/sistecredito-logo.png" alt="logo-siste">
+      <img id="logotipo-siste" src="https://i.postimg.cc/H8mPrvjy/sistecredito-logo.png" alt="logo-siste">.
     </span>
-    <span class="plain-text">. En </span>
-    <span id="cuotas"><strong>{{fees}}</strong></span>
-    <span class="plain-text"> cuotas de <strong>$</strong></span>
-    <span id="valor-cuota"><strong>{{totalFeeValue}}</strong></span>
-    <span class="plain-text"><strong>/mensual.</strong></span>
+
+    <span class="plain-text" *ngIf="fees>0">En </span>
+    <span id="cuotas" *ngIf="fees>0"><strong>{{fees}}</strong></span>
+    <span class="plain-text" *ngIf="fees>0"> cuotas de </span>
+    <span id="valor-cuota" *ngIf="fees>0"><strong>{{totalFeeValue | currency:"":"$":"1.0"}}</strong></span>
+    <span class="plain-text" *ngIf="fees>0"><strong>/mensual. </strong></span>
+
     <span class="plain-text">¿Aún no tienes tu crédito con nosotros? </span>
     <a id="link" href=""><strong>Solicítalo aquí.</strong></a>
   </div>

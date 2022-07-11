@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {headers, endpoint} from 'src/environments/environment';
+import {headers, endpoints} from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class ApiService {
 
   public getData(creditValue: number, storeId: string) {
 
-    const urlSimulator = endpoint.credinetSimulator + `creditValue=${creditValue}&storeId=${storeId}`;
+    const urlSimulator = `${endpoints.credinetSimulator}creditValue=${creditValue}&storeId=${storeId}`;
     const options = {
       headers: headers
     };

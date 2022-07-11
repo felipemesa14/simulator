@@ -9,6 +9,6 @@ export const headers = {
   country: 'co'
 };
 
-export const endpoint = {
+export const endpoints = {
   credinetSimulator: 'https://devapi.credinet.co/simulator/getTotalFeeValue?'
 };
