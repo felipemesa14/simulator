@@ -14,9 +14,12 @@ export class ApiService {
   }
 
   public getData(creditValue: number, storeId: string) {
-    const urlSimulator = endpoint.credinetSimulator + `creditValue=${creditValue}&storeId=${storeId}`
-    return this.http.get(urlSimulator, {
+
+    const urlSimulator = endpoint.credinetSimulator + `creditValue=${creditValue}&storeId=${storeId}`;
+    const options = {
       headers: headers
-    });
+    };
+
+    return this.http.get(urlSimulator, options);
   }
 }

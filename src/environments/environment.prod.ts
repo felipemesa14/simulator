@@ -1,5 +1,3 @@
-import { API_RESOURCES } from "src/app/core/http/api-resources";
-
 export const environment = {
   production: false
 };
@@ -11,7 +9,6 @@ export const headers = {
   country: 'co'
 };
 
-export const requestURL = {...API_RESOURCES};
 export const endpoint = {
-  credinetSimulator: 'https://devapi.credinet.co/simulator/'
+  credinetSimulator: 'https://devapi.credinet.co/simulator/getTotalFeeValue?'
 };

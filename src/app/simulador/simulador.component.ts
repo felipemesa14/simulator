@@ -27,9 +27,6 @@ export class SimuladorComponent {
   constructor(
     private apiService: ApiService
   ) {
-  }
-
-  ngOnInit() {
     this.apiService.getData(this.creditValue, this.storeId).subscribe((resp: any) => {
       this.fees = resp.data.fees
       this.totalFeeValue = resp.data.totalFeeValue
