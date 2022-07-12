@@ -14,8 +14,10 @@
   justify-content: left;
   align-items: center;
   padding: 6px 16px;
-  width: 496px;
-  height: 53px;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 1px solid #00369C;
   border-radius: 8px;
   opacity: 1;
@@ -23,8 +25,8 @@
 
 .container-info {
   line-height: 110%;
-  width: 400px;
-  height: 36px;
+  width: fit-content;
+  height: fit-content;
   padding: 0px;
 }
 
